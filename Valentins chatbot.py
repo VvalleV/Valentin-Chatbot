@@ -20,6 +20,13 @@ rules = [
     ]),
 ]
 
+fallback_responses = [ 
+    "Hmmm fascinating, can you explain that more?",
+    "I don't really understand, can you explain it to me even more?", 
+    "Please continue, im all ears",
+    "Can you explain that to me like if i was a child",
+    ""
+
 print("Hey there! Type 'bye' to exit.")
 
 while True:
@@ -37,4 +44,17 @@ while True:
         age = input(f"How old are you {name}? ")
         print(f"Cool! {age} is a very mature age.")
 
+    else: 
+           matched = False
+
+           for keywords, responses in 
+    rules:
+           if any(word in 
+    user_input for word in keywords): 
+                    print("chatbot:", 
+    random.choice(responses))
+                    matched = true 
+                    break 
+            if not matched:
+                 print("Hmmm intresting, tell me more about that.")
    
